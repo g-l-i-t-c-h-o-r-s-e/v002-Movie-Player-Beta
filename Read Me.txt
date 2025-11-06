@@ -79,6 +79,8 @@ Changelog:
 
 ***************************
 
+Beta 5  - Fixed crash in High Sierra and Mojave.
+
 Beta 4	- 64-bit support.
 	- Removed Start/Stop parameters.
 	- Added Play parameter.
