@@ -1,0 +1,100 @@
+***************************
+
+Credit:
+
+***************************
+
+Written by Anton Marini - 'vade' and Tom Butterworth - 'bangnoise'
+Audio device support contributed by Toby Harris - 'toby*spark'
+
+http://v002.info
+
+***************************
+
+License:
+
+***************************
+
+Creative Commons, Attribution - Non Commercial - Share Alike 3.0
+
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+See http://v002.info/?page_id=14 for more, including information about commercial use.
+
+***************************
+
+Instructions:
+
+***************************
+
+	This plugin requires OS X 10.6 or better.
+
+	Installation: The plugin goes in your "/Library/Graphics/Quartz Composer Plug-ins/" folder
+	(or the equivalent in your home directory).
+
+	For Quartz Composer
+	1) Instantiate the plugin as you would any native effect from the Patch Creator window.
+
+	An example composition is included.
+
+***************************
+
+Controls:
+
+***************************
+
+	Inputs:
+	
+	1) Movie Path - the location of your movie file. Relative or absolute path or URL for HTTP or RTSP stream.
+	2) Play - Boolean signal - True for playing, false for stopped.
+	3) Rate - the speed of movie playback.
+	4) Playhead - 0 to 1 normalized, to control the current time.
+	5) Audio Device - the UID of an Audio Device to use for playback, or empty for the system default.
+	6) Volume - Movie volume.
+	7) Balance - Movie balance.
+	8) Per-Track Volume - A structure of numbers with values 0.0 to 1.0 representing volume for each track.
+	9) Per-Track Balance - A structure of numbers with values 0.0 to 1.0 representing balance for each track.
+	10) Loop mode - no loop, loop, or palindrome.
+	11) Color Correction - Boolean - False to disable color correction.
+	12) Aperture Mode - Clean for normal usage, Production for every pixel, Encoded Pixels to force square pixels.
+	13) Deinterlace Hint - for media which supports it.
+	14) High Quality Hint - for media which supports it.
+	15) Single Field Hint - for media which supports it.
+	16) Decode Resolution - Number from 0.0 to 1.0. A lower resolution can improve performance for some codecs such as AIC and ProRes422.
+	17) Waveform Output - None, Mono Mix or Channels to determine the content of the Waveform output.
+	18) Frequency Bands - The number of bands per channel of Waveform output.
+
+	Outputs:
+	
+	1) Image - the video frame.
+	2) Normalized time - time, 0.0 to 1.0 of the movie duration.
+	3) Current movie time - time in seconds, with fractional values.
+	4) Movie Duration - in seconds, with fractional values.
+	5) Movie Title - the title of the movie, which may differ from the file name.
+
+
+***************************
+
+Changelog:
+
+***************************
+
+Beta 5  - Fixed Crash on High Sierra and Mojave.
+
+Beta 4	- 64-bit support.
+	- Removed Start/Stop parameters.
+	- Added Play parameter.
+	- Added Audio Device selection contributed by Toby Harris (toby*spark).
+	- Added Movie Balance and Per-Track Volume and Balance.
+	- Added Deinterlace Hint, High Quality Hint, Single Field Hint.
+	- Added Color Correction, Aperture Mode, Decode Resolution.
+	- Removed Reset parameter.
+	- Added configurable Waveform output.
+
+Beta 3	- Limited release.
+
+Beta 2 	- Added additional inputs and outputs. Re-ordered inputs and outputs.
+	- Added relative paths.
+	- Fixed a bug with using the QC context image provider convenience method and now supply our own provider.
+
+Beta 1	- Initial beta release.
