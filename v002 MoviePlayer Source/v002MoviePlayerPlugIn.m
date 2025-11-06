@@ -5,6 +5,23 @@
 //  Created by vade on 5/18/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
+// FIX: QC teardown null-port crash (GFException via _setValue:forOutputPort:)
+// --------------------------------------------------------------------------
+// Context:
+//   QC may call -disable: as part of patch cleanup, after ports have already
+//   been torn down. Writing to output ports here can hit a deallocated/null
+//   port and crash with:
+//     -[QCPlugIn(Ports) _setValue:forOutputPort:]: Argument "port" cannot be null
+//
+// Change:
+//   Do *not* touch any output ports in -disableExecution:. Only pause playback
+//   state via the DO proxy so the helper stops producing frames.
+//
+// Notes:
+//   • If you want to “clear” UI ports, do it while still active (eg, inside
+//     -execute: when no new frames arrive), never during disable/stop.
+//   • We keep movieWasPlaying to restore state in -enableExecution:.
+
 
 /* It's highly recommended to use CGL macros instead of changing the current context for plug-ins that perform OpenGL rendering */
 #import <OpenGL/CGLMacro.h>
