@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		233E2C640A83C768005A62DF /* Build & Copy */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 233E2D890A83C7AC005A62DF /* Build configuration list for PBXAggregateTarget "Build & Copy" */;
+			buildPhases = (
+				233E2C690A83C783005A62DF /* ShellScript */,
+			);
+			dependencies = (
+				233E2C660A83C76D005A62DF /* PBXTargetDependency */,
+			);
+			name = "Build & Copy";
+			productName = "Build & Install";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA96300A7EB9AC001E4983 /* Quartz.framework */; };
+		1B23EBAF0E99FC1B00163195 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23EBAE0E99FC1B00163195 /* OpenGL.framework */; };
+		1B23EC260E99FE3300163195 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23EC250E99FE3300163195 /* QuartzCore.framework */; };
+		1B23ECF90E9A04FF00163195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23ECF80E9A04FF00163195 /* Foundation.framework */; };
+		1B23ED7B0E9A053D00163195 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23ED7A0E9A053D00163195 /* AppKit.framework */; };
+		1BA89F8211A1EAE700734F2F /* v002MoviePlayerHelper in Resources */ = {isa = PBXBuildFile; fileRef = 1BA89F7B11A1EAB900734F2F /* v002MoviePlayerHelper */; };
+		1BA89F9711A1EB8400734F2F /* v002MoviePlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA89F7111A1EA9300734F2F /* v002MoviePlayerHelper.m */; };
+		1BA8A11611A1F1AC00734F2F /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA8A11511A1F1AC00734F2F /* IOSurface.framework */; };
+		1BA8A11E11A1F1BC00734F2F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23ED7A0E9A053D00163195 /* AppKit.framework */; };
+		1BA8A11F11A1F1BC00734F2F /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23EB8D0E99FC1500163195 /* QTKit.framework */; };
+		1BA8A12011A1F1BC00734F2F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA96300A7EB9AC001E4983 /* Quartz.framework */; };
+		1BA8A12111A1F1BC00734F2F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		1BA8A12211A1F1BC00734F2F /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8DCE0C103F2D2B00D6A144 /* QuickTime.framework */; };
+		1BA8A12611A1F1D000734F2F /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA8A11511A1F1AC00734F2F /* IOSurface.framework */; };
+		1BA8A19111A2671E00734F2F /* v002MoviePlayerPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8A19011A2671E00734F2F /* v002MoviePlayerPlugIn.m */; };
+		1BA8A1AB11A2E51700734F2F /* v002MoviePlayerTaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8A1AA11A2E51700734F2F /* v002MoviePlayerTaskWrapper.m */; };
+		1BA8A74411A47DEB00734F2F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B23EBAE0E99FC1B00163195 /* OpenGL.framework */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		BD6DCC7512D5553800521F45 /* v002IOSurfaceImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6DCC7412D5553800521F45 /* v002IOSurfaceImageProvider.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BA89F7F11A1EAD200734F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA89F7A11A1EAB800734F2F;
+			remoteInfo = v002MoviePlayerHelper;
+		};
+		233E2C650A83C76D005A62DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = "v002 MoviePlayer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		16AA5C440A7EEE7300888E31 /* v002 MoviePlayer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "v002 MoviePlayer_Prefix.pch"; sourceTree = "<group>"; };
+		16BA96300A7EB9AC001E4983 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		1B23EB8D0E99FC1500163195 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		1B23EBAE0E99FC1B00163195 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		1B23EC250E99FE3300163195 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		1B23ECF80E9A04FF00163195 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		1B23ED7A0E9A053D00163195 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1B8DCE0C103F2D2B00D6A144 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		1BA89F5D11A1E22800734F2F /* v002MoviePlayerHelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v002MoviePlayerHelperProtocol.h; sourceTree = "<group>"; };
+		1BA89F7011A1EA9300734F2F /* v002MoviePlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v002MoviePlayerHelper.h; sourceTree = "<group>"; };
+		1BA89F7111A1EA9300734F2F /* v002MoviePlayerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = v002MoviePlayerHelper.m; sourceTree = "<group>"; };
+		1BA89F7B11A1EAB900734F2F /* v002MoviePlayerHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = v002MoviePlayerHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA8A11511A1F1AC00734F2F /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		1BA8A18F11A2671E00734F2F /* v002MoviePlayerPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v002MoviePlayerPlugIn.h; sourceTree = "<group>"; };
+		1BA8A19011A2671E00734F2F /* v002MoviePlayerPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = v002MoviePlayerPlugIn.m; sourceTree = "<group>"; };
+		1BA8A1A911A2E51700734F2F /* v002MoviePlayerTaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v002MoviePlayerTaskWrapper.h; sourceTree = "<group>"; };
+		1BA8A1AA11A2E51700734F2F /* v002MoviePlayerTaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = v002MoviePlayerTaskWrapper.m; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* v002 MoviePlayer.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "v002 MoviePlayer.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6DCC7312D5553800521F45 /* v002IOSurfaceImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v002IOSurfaceImageProvider.h; sourceTree = "<group>"; };
+		BD6DCC7412D5553800521F45 /* v002IOSurfaceImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = v002IOSurfaceImageProvider.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BA89F7911A1EAB800734F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA8A74411A47DEB00734F2F /* OpenGL.framework in Frameworks */,
+				1BA8A11E11A1F1BC00734F2F /* AppKit.framework in Frameworks */,
+				1BA8A11F11A1F1BC00734F2F /* QTKit.framework in Frameworks */,
+				1BA8A12011A1F1BC00734F2F /* Quartz.framework in Frameworks */,
+				1BA8A12111A1F1BC00734F2F /* Cocoa.framework in Frameworks */,
+				1BA8A12211A1F1BC00734F2F /* QuickTime.framework in Frameworks */,
+				1BA8A11611A1F1AC00734F2F /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA8A12611A1F1D000734F2F /* IOSurface.framework in Frameworks */,
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				16BA96310A7EB9AC001E4983 /* Quartz.framework in Frameworks */,
+				1B23EBAF0E99FC1B00163195 /* OpenGL.framework in Frameworks */,
+				1B23EC260E99FE3300163195 /* QuartzCore.framework in Frameworks */,
+				1B23ECF90E9A04FF00163195 /* Foundation.framework in Frameworks */,
+				1B23ED7B0E9A053D00163195 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Quartz Composer Plug In */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = "Quartz Composer Plug In";
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B23ED7A0E9A053D00163195 /* AppKit.framework */,
+				1B23ECF80E9A04FF00163195 /* Foundation.framework */,
+				1B23EC250E99FE3300163195 /* QuartzCore.framework */,
+				1B23EBAE0E99FC1B00163195 /* OpenGL.framework */,
+				1B23EB8D0E99FC1500163195 /* QTKit.framework */,
+				16BA96300A7EB9AC001E4983 /* Quartz.framework */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				1B8DCE0C103F2D2B00D6A144 /* QuickTime.framework */,
+				1BA8A11511A1F1AC00734F2F /* IOSurface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1BA89F6F11A1EA6F00734F2F /* IOSurface Helper */,
+				1BA89F5A11A1DFC000734F2F /* Distributed Object Protocol */,
+				1BA8A19211A2672600734F2F /* Plugin */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* v002 MoviePlayer.plugin */,
+				1BA89F7B11A1EAB900734F2F /* v002MoviePlayerHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BA89F5A11A1DFC000734F2F /* Distributed Object Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1BA89F5D11A1E22800734F2F /* v002MoviePlayerHelperProtocol.h */,
+			);
+			name = "Distributed Object Protocol";
+			sourceTree = "<group>";
+		};
+		1BA89F6F11A1EA6F00734F2F /* IOSurface Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1BA89F7011A1EA9300734F2F /* v002MoviePlayerHelper.h */,
+				1BA89F7111A1EA9300734F2F /* v002MoviePlayerHelper.m */,
+			);
+			name = "IOSurface Helper";
+			sourceTree = "<group>";
+		};
+		1BA8A19211A2672600734F2F /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8A18F11A2671E00734F2F /* v002MoviePlayerPlugIn.h */,
+				1BA8A19011A2671E00734F2F /* v002MoviePlayerPlugIn.m */,
+				BD6DCC7312D5553800521F45 /* v002IOSurfaceImageProvider.h */,
+				BD6DCC7412D5553800521F45 /* v002IOSurfaceImageProvider.m */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8A1A911A2E51700734F2F /* v002MoviePlayerTaskWrapper.h */,
+				1BA8A1AA11A2E51700734F2F /* v002MoviePlayerTaskWrapper.m */,
+				16AA5C440A7EEE7300888E31 /* v002 MoviePlayer_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BA89F7A11A1EAB800734F2F /* v002MoviePlayerHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA89F9211A1EAF800734F2F /* Build configuration list for PBXNativeTarget "v002MoviePlayerHelper" */;
+			buildPhases = (
+				1BA89F7811A1EAB800734F2F /* Sources */,
+				1BA89F7911A1EAB800734F2F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = v002MoviePlayerHelper;
+			productName = v002MoviePlayerHelper;
+			productReference = 1BA89F7B11A1EAB900734F2F /* v002MoviePlayerHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+		8D5B49AC048680CD000E48DA /* v002 MoviePlayer.plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "v002 MoviePlayer.plugin" */;
+			buildPhases = (
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				1BA89F9311A1EAF800734F2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BA89F8011A1EAD200734F2F /* PBXTargetDependency */,
+			);
+			name = "v002 MoviePlayer.plugin";
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "Quartz Composer Plug In";
+			productReference = 8D5B49B6048680CD000E48DA /* v002 MoviePlayer.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "v002 MoviePlayer" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Quartz Composer Plug In */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BA89F7A11A1EAB800734F2F /* v002MoviePlayerHelper */,
+				8D5B49AC048680CD000E48DA /* v002 MoviePlayer.plugin */,
+				233E2C640A83C768005A62DF /* Build & Copy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BA89F9311A1EAF800734F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA89F8211A1EAE700734F2F /* v002MoviePlayerHelper in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		233E2C690A83C783005A62DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/v002 MoviePlayer.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/v002 MoviePlayer.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BA89F7811A1EAB800734F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA89F9711A1EB8400734F2F /* v002MoviePlayerHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA8A19111A2671E00734F2F /* v002MoviePlayerPlugIn.m in Sources */,
+				1BA8A1AB11A2E51700734F2F /* v002MoviePlayerTaskWrapper.m in Sources */,
+				BD6DCC7512D5553800521F45 /* v002IOSurfaceImageProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BA89F8011A1EAD200734F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA89F7A11A1EAB800734F2F /* v002MoviePlayerHelper */;
+			targetProxy = 1BA89F7F11A1EAD200734F2F /* PBXContainerItemProxy */;
+		};
+		233E2C660A83C76D005A62DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D5B49AC048680CD000E48DA /* v002 MoviePlayer.plugin */;
+			targetProxy = 233E2C650A83C76D005A62DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BA89F7D11A1EAB900734F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "v002 MoviePlayer_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/bin;
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = v002MoviePlayerHelper;
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		1BA89F7E11A1EAB900734F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SSE41_EXTENSIONS = NO;
+				GCC_ENABLE_SSE42_EXTENSIONS = NO;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "v002 MoviePlayer_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/bin;
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = v002MoviePlayerHelper;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = i386;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "v002 MoviePlayer_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "v002 MoviePlayer";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "v002 MoviePlayer_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "v002 MoviePlayer";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG_PRINT;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-bundle",
+					"-Wl,-undefined,dynamic_lookup",
+				);
+				SDKROOT = macosx10.6;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = "";
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-bundle",
+					"-Wl,-undefined,dynamic_lookup",
+				);
+				SDKROOT = macosx10.6;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = "";
+			};
+			name = Release;
+		};
+		233E2D8A0A83C7AC005A62DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Build & Install";
+			};
+			name = Debug;
+		};
+		233E2D8B0A83C7AC005A62DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Build & Install";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BA89F9211A1EAF800734F2F /* Build configuration list for PBXNativeTarget "v002MoviePlayerHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA89F7D11A1EAB900734F2F /* Debug */,
+				1BA89F7E11A1EAB900734F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "v002 MoviePlayer.plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "v002 MoviePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233E2D890A83C7AC005A62DF /* Build configuration list for PBXAggregateTarget "Build & Copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233E2D8A0A83C7AC005A62DF /* Debug */,
+				233E2D8B0A83C7AC005A62DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,44 @@
+#ifdef __OBJC__
+	#import <Quartz/Quartz.h>
+#endif
+ 
+// 0: Use a QTPixelBufferContext in the helper, request IOSurfaces as pixel buffers.
+// 1: use a QTOpenGLTextureContext in the helper, render to FBO with IOSurface texture attachment.
+
+// Discussion:
+
+// For 0:
+// We pass CVPixelBuffers as 32_BGRA from our QTPixelBufferContext.
+// It also seems like we have to make a local plugin copy of the pixel buffer.
+// We then have the option of managing GL upload ourself,
+// (v002MoviePlayerPluginUseGLVisalContext = 1 see below)
+// or letting QC upload the texture for us.
+
+// For 1:
+// We let the CVOpenGLTextureContext manage the pixel format for us, this
+// means we get 'fast path' upload via YUV textures, client storage and the 
+// like. We render the output CVOpenGLTextureRef into an FBO, which converts
+// to our required 32_BGRA format. The texture attachment is an IOSurface,
+// which is then passed as a texture to our Plugin. 
+// For this option to work, we must have v002MoviePlayerPluginUseGLUpload = 1
+
+#define v002MoviePlayerPluginHelperUseGLVisualContext 1
+
+// 0: use outputImageProviderFromBufferWithPixelFormat in plugin
+// 1: use outputImageProviderFromTextureWithPixelFormat in plugin
+
+#define v002MoviePlayerPluginUseGLUpload 1
+
+// 0: naughtily reuse one IOSurface in the helper, which may vanish or update while QC thinks it's an earlier frame
+// 1: use a new IOSurface every frame
+
+#define v002MOVIEPLAYER_SURFACE_PER_FRAME 1
+
+
+#ifdef DEBUG_PRINT
+#define DLog(format, ...) NSLog((format), ##__VA_ARGS__)
+#else
+#define DLog(format, ...)
+#endif
+
+#define v002IOSurfaceImageProvider_Unique_Class_Name v002IOSurfaceImageProviderQCMoviePlayer
