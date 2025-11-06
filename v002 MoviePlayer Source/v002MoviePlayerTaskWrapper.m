@@ -70,6 +70,32 @@
 //   No more spurious notifications after EOF, and no more EAGAIN when we
 //   synchronously drain during controlled shutdown on 10.14.
 
+// FIX 2: Deterministic NSTask shutdown; no EAGAIN; idempotent
+// ---------------------------------------------------------
+// Goals:
+//   • Stop receiving background read notifications before terminating.
+//   • Let the child exit cleanly (close stdin), then wait for exit.
+//   • Optionally drain remaining stdout without tripping EAGAIN.
+//   • Make the method safe to call multiple times (idempotent).
+//
+// Steps:
+//   1) Remove NSFileHandleReadCompletionNotification observer *first* so no
+//      new async callbacks race in during teardown.
+//   2) Close stdin to signal EOF to the child, then [task terminate] and
+//      [task waitUntilExit] so pipes reach EOF predictably.
+//   3) Best-effort synchronous drain of any remaining bytes inside @try,
+//      swallowing EAGAIN ("Resource temporarily unavailable") that 10.14
+//      pipes can throw if the fd is momentarily non-blocking.
+//   4) Close remaining fds, send -processFinished:withStatus:, and nil out
+//      'controller' so repeated calls become no-ops.
+//
+// Outcome:
+//   • Eliminates "*** -[NSConcreteFileHandle availableData]: Resource temporarily
+//     unavailable" on shutdown.
+//   • Avoids dangling notifications after EOF.
+//   • Prevents teardown races between the task and the reader.
+
+
 #import "v002MoviePlayerTaskWrapper.h"
 
 
