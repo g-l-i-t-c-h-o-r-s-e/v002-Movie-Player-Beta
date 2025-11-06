@@ -53,7 +53,22 @@
  Now we just do the right thing in all cases without the superfluous if check.
  */
 
-
+// FIX: Pipe reader re-arm only on data (avoid EAGAIN + stray notifies)
+// --------------------------------------------------------------------
+// Problem:
+//   The legacy Apple TaskWrapper re-armed background reads even on EOF.
+//   After teardown, this can deliver NSFileHandleReadCompletionNotification
+//   repeatedly with zero-length data and/or race with a final synchronous
+//   drain in -stopProcess, leading to
+//     *** -[NSConcreteFileHandle availableData]: Resource temporarily unavailable
+//
+// Change:
+//   Re-arm the background read *only* when bytes > 0. On zero-length (EOF),
+//   do *not* re-arm; call -stopProcess to finish cleanup.
+//
+// Result:
+//   No more spurious notifications after EOF, and no more EAGAIN when we
+//   synchronously drain during controlled shutdown on 10.14.
 
 #import "v002MoviePlayerTaskWrapper.h"
 
