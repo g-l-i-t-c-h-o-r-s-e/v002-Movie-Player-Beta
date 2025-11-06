@@ -1,2 +1,1 @@
-# v002-Movie-Player-Beta
-Play Quicktime movie files, stream RTSP movies as well as fast start progressive download movies over HTTP
+This is a fix for a crash in the beta Quicktime version of v002 Movie Player, when you stopped the Quartz Composition.
